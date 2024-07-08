@@ -10,13 +10,13 @@ class DataController extends Controller
 {
     public function index()
     {
-        // Mengambil semua data dari tabel data_stunting
-        $data = Data::all();
-        $total_kasus =$data->sum('jumlah_kasus');
-
-        //Hiitung Persentase
-        $data = $data->map(function ($item) use($total_kasus) {
-            $item->persentase = $total_kasus > 0 ? ($item->jumlah_kasus/$total_kasus) * 100 : 0;
+        // Mengambil semua data dari tabel datas dengan pagination 5 data per halaman
+        $data = Data::paginate(10);
+        $total_kasus = Data::sum('jumlah_kasus');
+    
+        // Hitung Persentase
+        $data->transform(function ($item) use ($total_kasus) {
+            $item->persentase = $total_kasus > 0 ? ($item->jumlah_kasus / $total_kasus) * 100 : 0;
             return $item;
         });
         

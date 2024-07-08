@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- CSS -->
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="{{ asset("css/style.css") }}">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,8 @@
             <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#lokasi-peta">Map</a>
             <a class="nav-item nav-link" href="#data-stunting">Data Stunting</a>
-            <a class="nav-item btn btn-primary tombol" href="#">Login Admin</a>
+            <a class="nav-item nav-link" href="#about-us">About Us</a>
+            <a class="nav-item btn btn-primary" href="#">Login Admin</a>
           </div>
         </div>
       </div>
