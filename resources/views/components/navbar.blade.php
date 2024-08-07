@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="img/logo.png" >
+
     <title>SIG STUNTING</title>
   </head>
   <body>

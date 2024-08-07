@@ -15,6 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('kecamatan');
             $table->integer('jumlah_kasus');
+            $table->integer('balita_idl');
+            $table->integer('asi_eksklusif');
+            $table->integer('balita_gizi_kurang');
+            $table->integer('akses_sanitasi_layak');
+            $table->integer('vit_a');
             $table->text('info');
             $table->string('latitude');
             $table->string('longitude');
