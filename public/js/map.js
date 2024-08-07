@@ -24,7 +24,7 @@ function initMap() {
             color = '#ff6666'; // Lebih tua
         } else if (jumlahStunting > 389 && jumlahStunting <= 591) {
             color = '#ff3333'; // Merah tua
-        }
+        } 
 
         return {
             fillColor: color,

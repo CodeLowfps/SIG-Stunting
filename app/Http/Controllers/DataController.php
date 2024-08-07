@@ -10,8 +10,8 @@ class DataController extends Controller
 {
     public function index()
     {
-        // Mengambil semua data dari tabel datas dengan pagination 5 data per halaman
-        $data = Data::paginate(10);
+        // Mengambil semua data dari tabel datas dengan pagination 5 data per halaman8
+        $data = Data::orderBy('jumlah_kasus', 'desc')->paginate(10);//perbaiki
         $total_kasus = Data::sum('jumlah_kasus');
     
         // Hitung Persentase
@@ -19,7 +19,7 @@ class DataController extends Controller
             $item->persentase = $total_kasus > 0 ? ($item->jumlah_kasus / $total_kasus) * 100 : 0;
             return $item;
         });
-        
+
         // Mengirim data ke view
         return view('welcome', compact('data'));
     }
